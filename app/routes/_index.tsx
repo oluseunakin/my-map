@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { json, type MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
@@ -23,8 +24,8 @@ import { WeatherTab } from "~/components/WeatherTab";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Map and Weather App" },
+    { name: "description", content: "Map and Weather at your convenience!" },
   ];
 };
 
@@ -77,9 +78,13 @@ export default function Index() {
         longitude: position.coords.longitude,
       });
     };
-    location.getCurrentPosition(getPositionSuccess, (error) => {
-      console.log(error);
-    });
+    location.getCurrentPosition(
+      getPositionSuccess,
+      (error) => {
+        console.log(error);
+      },
+      { enableHighAccuracy: true }
+    );
   }, []);
 
   useEffect(() => {
@@ -98,7 +103,7 @@ export default function Index() {
       L.marker([coordinates.latitude, coordinates.longitude])
         .addTo(map)
         .bindPopup("You are here.")
-        .openPopup(); 
+        .openPopup();
     }
   }, [coordinates]);
 
