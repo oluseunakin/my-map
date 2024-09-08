@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
     "@emotion/server": "latest",
+    "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.0.14",
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
     "@remix-run/node": "^2.11.2",
     "@remix-run/react": "^2.11.2",
     "@remix-run/serve": "^2.11.2",
@@ -25,6 +26,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.25.4",
     "@remix-run/dev": "^2.11.2",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
