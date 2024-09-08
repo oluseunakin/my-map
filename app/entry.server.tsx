@@ -4,12 +4,11 @@ import type { EntryContext } from "@remix-run/node";
 import createEmotionCache from "./createEmotionCache";
 import theme from "./theme";
 import materialPkg from "@mui/material/";
-import stylePkg from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
 import createEmotionServer from "@emotion/server/create-instance";
 
 const { CssBaseline } = materialPkg;
-const { ThemeProvider } = stylePkg;
 
 export default function handleRequest(
   request: Request,
