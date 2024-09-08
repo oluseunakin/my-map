@@ -5,12 +5,11 @@ import createEmotionCache from "./createEmotionCache";
 import theme from "./theme";
 import materialPkg from "@mui/material/";
 import stylePkg from "@mui/material/styles";
-import reactPkg from "@emotion/react";
+import { CacheProvider } from "@emotion/react";
 import createEmotionServer from "@emotion/server/create-instance";
 
 const { CssBaseline } = materialPkg;
 const { ThemeProvider } = stylePkg;
-const { CacheProvider } = reactPkg;
 
 export default function handleRequest(
   request: Request,
