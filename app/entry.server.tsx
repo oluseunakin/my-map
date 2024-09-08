@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as ReactDOMServer from "react-dom/server";
 import { RemixServer } from "@remix-run/react";
 import type { EntryContext } from "@remix-run/node";
 import createEmotionCache from "./createEmotionCache";
 import theme from "./theme";
 import materialPkg from "@mui/material/";
-import { ThemeProvider } from "@mui/material/styles";
+import pkg from '@mui/material/styles';
+const { createTheme, ThemeProvider } = pkg;
 import { CacheProvider } from "@emotion/react";
 import createEmotionServer from "@emotion/server/create-instance";
 
